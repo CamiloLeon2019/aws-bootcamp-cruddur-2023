@@ -16,11 +16,11 @@ I already ahve some of the pre requisite knowldege and technologies (aws and git
   
  To be honest, i feel excited and overwhelmed at the same time with so much stuff to watch and the time available for me, but i see this as a great challenge for me. 
  
-  <h1> Homework journal </h1>
+  <h1> Homework journal 📝 </h1>
   
   The first task has already been done last Saturday along with you and i have some great takeaways from the classs, such as the general scope of the project, stakeholders, goals, methodology as well asimportant knowlegde to acquire throughout the whole bootcamp.
   
-  <h3> Spend considerations </h3>
+  <h2> Spend considerations 🤑 </h2> 
   
   ![image](https://user-images.githubusercontent.com/49325152/218624288-ae52761b-193e-4cf1-aeef-4eef4fdd563d.png)
 
@@ -29,9 +29,22 @@ I already ahve some of the pre requisite knowldege and technologies (aws and git
 ![image](https://user-images.githubusercontent.com/49325152/218631336-e8f927af-cc96-44a2-9c67-4ca2f1b4d1c7.png)
 
 
-While reviewing Chirag's video iwas not able to get billing information for my IAM account correctly so i had to llo up for AWS documentation for help on this and i found this article (https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_billing.html?icmpid=docs_iam_console#tutorial-billing-step1) which was very helpful.
+While reviewing Chirag's video iwas not able to get billing information for my IAM account correctly so i had to llo up for AWS documentation for help on this and i found this article which was very helpful: (https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_billing.html?icmpid=docs_iam_console#tutorial-billing-step1) 
   
  I configured the Cloudwatch billing alarm and recieve my first notification 😎.
   
   ![image](https://user-images.githubusercontent.com/49325152/218633050-fa1ea6d2-8e40-48d2-b3f0-0b6ab07e07a3.png)
 
+  Watching the video was useful to see the how much money i've spent and i hope that by the end of this project my spent is as unexpensive as possible.
+  
+    <h2> Cloud Security 🔏 <h2>
+  
+  Watching an hour video seems interesting for me, however some concepts reviewd on the CLF-C01 cert course, such as IAM, but this Cloud security concept is something 'll definetily look into from now on. I think that services, data and app that is cloud-enabled is even more vulnerable to attacks as there are more attack surfaces being publicly available and even private.
+
+I've done already the MFA for my root and IAM admin account, so i just did a refresher there and created my AWS Organizations account:
+
+![image](https://user-images.githubusercontent.com/49325152/218816274-a694a4fc-e041-4074-915d-116dab6476a7.png)
+  
+Moving forward, I've reviewed the AWS Cloudtrail functionalities and how benefitial it is for logging and visiility of historical data. Following along Ashish cloudtrail logs creation, i created mine and i was relieved to see that creating this trail has <a href=https://aws.amazon.com/cloudtrail/pricing//>no additional charges <a>
+
+  
