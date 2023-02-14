@@ -29,5 +29,9 @@ I already ahve some of the pre requisite knowldege and technologies (aws and git
 ![image](https://user-images.githubusercontent.com/49325152/218631336-e8f927af-cc96-44a2-9c67-4ca2f1b4d1c7.png)
 
 
-While reviewing Chirag's video iwas not able to get billing information for my IAM account correctly so i had to llo up for AWS documentation for help on this and i found <a href=https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_billing.html?icmpid=docs_iam_console#tutorial-billing-step1/>this<a> which was very helpful.
+While reviewing Chirag's video iwas not able to get billing information for my IAM account correctly so i had to llo up for AWS documentation for help on this and i found this article (https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_billing.html?icmpid=docs_iam_console#tutorial-billing-step1) which was very helpful.
   
+ I configured the Cloudwatch billing alarm and recieve my first notification 😎.
+  
+  ![image](https://user-images.githubusercontent.com/49325152/218633050-fa1ea6d2-8e40-48d2-b3f0-0b6ab07e07a3.png)
+
