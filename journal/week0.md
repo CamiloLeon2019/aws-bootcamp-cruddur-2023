@@ -47,4 +47,10 @@ I've done already the MFA for my root and IAM admin account, so i just did a ref
   
 Moving forward, I've reviewed the AWS Cloudtrail functionalities and how benefitial it is for logging and visiility of historical data. Following along Ashish cloudtrail logs creation, i created mine and i was relieved to see that creating this trail has <a href=https://aws.amazon.com/cloudtrail/pricing//>no additional charges <a>
 
-  
+IAM users, roles, groups and policies have been checkd for my account as part of the certification course, so i had that already covered, anyways it's a great refresher. 
+ 
+ I've copied the recommended CSPs provided by Ashish:
+
+![image](https://user-images.githubusercontent.com/49325152/218886334-8abe6cab-cb7a-4479-aeff-7b6f3a5af3db.png)
+
+It was difficult for me to undersatnd the differnce between regular policies and SCPs.
