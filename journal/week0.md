@@ -30,15 +30,20 @@ I already have some of the pre requisite knowldege and technologies (aws and git
 The first task has already been done last Saturday along with you and i have some great takeaways from the classs, such as the general scope of the project, stakeholders, goals, methodology as well asimportant knowlegde to acquire throughout the whole bootcamp.
  
 Here's my other tools accounts.
-  Honeycomb.io:
+  
+ **Gitpod:**
+
+  ![imagen](https://user-images.githubusercontent.com/49325152/219923927-ce4930e4-62ee-437e-a7e7-db449d2117e3.png)
+  
+ **Honeycomb.io:**
   
   ![imagen](https://user-images.githubusercontent.com/49325152/219919863-1a580f5b-6ec8-4f81-ba4b-9849b50fff9f.png)
 
-  Github codespaces:
+ **Github codespaces:**
   
 ![imagen](https://user-images.githubusercontent.com/49325152/219920065-ea645d97-41c6-423f-b40b-457ea86ee0c7.png)
 
-  Rollbar (this one i got to the point where Lane got):
+ **Rollbar (this one i got to the point where Lane got):**
   
   ![imagen](https://user-images.githubusercontent.com/49325152/219921666-136d9909-1bd1-47e9-a63a-08fa17097f53.png)
   
@@ -61,6 +66,8 @@ While reviewing Chirag's video i was not able to get billing information for my 
 ## Cloudwatch billing alarm
  
 I configured the Cloudwatch billing alarm and recieve my first notification 😎
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219927405-80e4dc78-3d4d-4f6e-9b3a-03c40d9ec347.png)
 
   ![image](https://user-images.githubusercontent.com/49325152/218633050-fa1ea6d2-8e40-48d2-b3f0-0b6ab07e07a3.png)
 
@@ -73,7 +80,9 @@ Watching the video was useful to see the how much money i've spent and i hope th
 Watching an hour video seems interesting for me, however some concepts reviewd on the CLF-C01 cert course, such as IAM, but this Cloud security concept is something 'll definetily look into from now on. I think that services, data and app that is cloud-enabled is even more vulnerable to attacks as there are more attack surfaces being publicly available and even private.
   
 ## AWS CLI setup
-    
+
+AWS CLI tool installed via Gitpod Terminal using:
+
   ```
   $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   unzip awscliv2.zip
@@ -83,6 +92,9 @@ Watching an hour video seems interesting for me, however some concepts reviewd o
  After configuring the Gitpod workspace, aws credentials and the CLI environment, i made a commit via Gitpod:
   
   ![imagen](https://user-images.githubusercontent.com/49325152/219933215-9f51c726-3c95-42dc-9a8a-4030d01c0ebf.png)
+
+ 
+  ![imagen](https://user-images.githubusercontent.com/49325152/219926989-6cea0a3c-ebf1-4e32-afbe-7e34b76bb6fe.png)
   
 ## AWS organizations account
 
