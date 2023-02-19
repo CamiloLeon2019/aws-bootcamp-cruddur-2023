@@ -70,6 +70,8 @@ Watching the video was useful to see the how much money i've spent and i hope th
   
   <h2> Cloud Security 🔏 </h2>
   
+Watching an hour video seems interesting for me, however some concepts reviewd on the CLF-C01 cert course, such as IAM, but this Cloud security concept is something 'll definetily look into from now on. I think that services, data and app that is cloud-enabled is even more vulnerable to attacks as there are more attack surfaces being publicly available and even private.
+  
 ## AWS CLI setup
     
   ```
@@ -81,9 +83,6 @@ Watching the video was useful to see the how much money i've spent and i hope th
  After configuring the Gitpod workspace, aws credentials and the CLI environment, i made a commit via Gitpod:
   
   ![imagen](https://user-images.githubusercontent.com/49325152/219933215-9f51c726-3c95-42dc-9a8a-4030d01c0ebf.png)
-
-  
-  Watching an hour video seems interesting for me, however some concepts reviewd on the CLF-C01 cert course, such as IAM, but this Cloud security concept is something 'll definetily look into from now on. I think that services, data and app that is cloud-enabled is even more vulnerable to attacks as there are more attack surfaces being publicly available and even private.
   
 ## AWS organizations account
 
