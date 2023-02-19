@@ -9,6 +9,7 @@ It's my first time using and editing this file text, so i just had to look up on
 - [Pre-requisites](#pre-requisites).
 - [Budget](#budget) 
 - [Cloudwatch billing alarm](#cloudwatch-billing-alarm)
+- [AWS CLI setup](#aws-cli-setup)
 - [Logical Architectural diagram](#logical-architectural-diagram).
 - [Draft & conceptual diagram](#conceptual-architectural-diagram).
 - [AWS Organizations account](#aws-organizations-account).
@@ -76,20 +77,24 @@ Watching the video was useful to see the how much money i've spent and i hope th
   
   <h2> Cloud Security 🔏 </h2>
   
-  ## AWS CLI
+Watching an hour video seems interesting for me, however some concepts reviewd on the CLF-C01 cert course, such as IAM, but this Cloud security concept is something 'll definetily look into from now on. I think that services, data and app that is cloud-enabled is even more vulnerable to attacks as there are more attack surfaces being publicly available and even private.
   
-  AWS CLI tool installed via Gitpod Terminal using:
-  
+## AWS CLI setup
+
+AWS CLI tool installed via Gitpod Terminal using:
+
   ```
   $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
   unzip awscliv2.zip
   sudo ./aws/install
   ```
+
+ After configuring the Gitpod workspace, aws credentials and the CLI environment, i made a commit via Gitpod:
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219933215-9f51c726-3c95-42dc-9a8a-4030d01c0ebf.png)
+
  
   ![imagen](https://user-images.githubusercontent.com/49325152/219926989-6cea0a3c-ebf1-4e32-afbe-7e34b76bb6fe.png)
-
-  
-  Watching an hour video seems interesting for me, however some concepts reviewd on the CLF-C01 cert course, such as IAM, but this Cloud security concept is something 'll definetily look into from now on. I think that services, data and app that is cloud-enabled is even more vulnerable to attacks as there are more attack surfaces being publicly available and even private.
   
 ## AWS organizations account
 
