@@ -28,6 +28,19 @@ I already have some of the pre requisite knowldege and technologies (aws and git
  To be honest, i feel excited and overwhelmed at the same time with so much stuff to watch and the time available for me, but i see this as a great challenge for me. 
 The first task has already been done last Saturday along with you and i have some great takeaways from the classs, such as the general scope of the project, stakeholders, goals, methodology as well asimportant knowlegde to acquire throughout the whole bootcamp.
  
+Here's my other tools accounts.
+  Honeycomb.io:
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219919863-1a580f5b-6ec8-4f81-ba4b-9849b50fff9f.png)
+
+  Github codespaces:
+  
+![imagen](https://user-images.githubusercontent.com/49325152/219920065-ea645d97-41c6-423f-b40b-457ea86ee0c7.png)
+
+  Rollbar (this one i got to the point where Lane got):
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219921666-136d9909-1bd1-47e9-a63a-08fa17097f53.png)
+  
 [Back to contents table](#contents-table)
   
   <h2> Spend considerations 🤑 </h2> 
@@ -40,7 +53,7 @@ While reviewing Chirag's video i was not able to get billing information for my 
   
 ## Budget
   
-  ![image](https://user-images.githubusercontent.com/49325152/219845856-510dd63b-5e1b-40c0-b90e-837bea7ba1fc.png)
+![imagen](https://user-images.githubusercontent.com/49325152/219922251-d5b29a73-60a9-4213-b827-44415922743b.png)
   
 [Back to contents table](#contents-table)
  
