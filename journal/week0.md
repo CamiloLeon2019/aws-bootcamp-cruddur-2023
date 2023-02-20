@@ -165,3 +165,14 @@ https://lucid.app/lucidchart/596703a1-f23f-4943-a12f-844adec9ef11/edit?viewport_
    ![image](https://user-images.githubusercontent.com/49325152/219844208-20e2613b-a3d9-40b7-8551-db8f7b6f2e43.png)
   
   ![image](https://user-images.githubusercontent.com/49325152/219846030-55829f7f-4aa3-474d-be51-1fed287b9317.png)
+  
+  ###  Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue.
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219993920-d122a872-d0b6-4c92-b918-4b8e60c4a22e.png)
+
+![imagen](https://user-images.githubusercontent.com/49325152/219994326-90c3f8e4-330c-480e-84f8-8b4294508d94.png)
+  
+### Review all the questions of each pillars in the Well Architected Tool (No specialized lens)
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219997431-e82bdb14-4c0f-475e-b092-55a779d9f74b.png)
+
