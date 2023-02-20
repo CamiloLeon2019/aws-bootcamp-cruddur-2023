@@ -124,10 +124,10 @@ Moving forward, I've reviewed the AWS Cloudtrail functionalities and how benefit
 
 IAM users, roles, groups and policies have been checkd for my account as part of the certification course, so i had that already covered, anyways it's a great refresher. 
  
- I've copied the recommended CSPs provided by Ashish:
+ I've copied the recommended SCPs provided by Ashish:
 
-![image](https://user-images.githubusercontent.com/49325152/218886334-8abe6cab-cb7a-4479-aeff-7b6f3a5af3db.png)
-
+![imagen](https://user-images.githubusercontent.com/49325152/219992241-2947ccfc-4fe5-4a19-bc2f-41931ac1b502.png)
+  
 It was difficult for me to understand the difference between regular policies and SCPs, but the general idea of the policies was understood and i really like the concept of configuring and managing them (as well as many other AWS services). 
   
   [Back to contents table](#contents-table)
