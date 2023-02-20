@@ -7,25 +7,19 @@ It's my first time using and editing this file text, so i just had to look up on
  ## Contents table
 
 - [Pre-requisites](#pre-requisites).
-- [Budget](#budget) 
-- [Cloudwatch billing alarm](#cloudwatch-billing-alarm)
 - [AWS CLI setup](#aws-cli-setup)
+- [Budget](#budget) 
+- [Billing alarms](#billing-alarm)
+- [AWS Organizations account](#aws-organizations-account).
 - [Logical Architectural diagram](#logical-architectural-diagram).
 - [Draft & conceptual diagram](#conceptual-architectural-diagram).
-- [AWS Organizations account](#aws-organizations-account).
+- [Homework Challenges](#homework-challenges)
 
  ## Pre-requisites
   
 Now, i understand this would be the journal for every new progress that i have for the project so i'll try to document everything as far as i can. I was part of the live session last Saturday along with Margaret, Shala, Chris and you. I had a great time learning on how the project is going to be and understanding the value of the cloud onto this. I was at my job time back then and the day after, so just now i have the time to review all the documentation available, such as the project outline.
   
-I already have some of the pre requisite knowldege and technologies (aws and github account) and i am reading everything to make sure i am up-to-date. 
- 
- ![image](https://user-images.githubusercontent.com/49325152/219844208-20e2613b-a3d9-40b7-8551-db8f7b6f2e43.png)
- 
- I know that this is part of the homework challenges for this week so here is my IAM portal showing my admin account for my aws account.
-  
-  ![image](https://user-images.githubusercontent.com/49325152/219846030-55829f7f-4aa3-474d-be51-1fed287b9317.png)
-   
+I already have some of the pre requisite knowldege and technologies (aws and github account) and i am reading everything to make sure i am up-to-date.
  To be honest, i feel excited and overwhelmed at the same time with so much stuff to watch and the time available for me, but i see this as a great challenge for me. 
 The first task has already been done last Saturday along with you and i have some great takeaways from the classs, such as the general scope of the project, stakeholders, goals, methodology as well asimportant knowlegde to acquire throughout the whole bootcamp.
  
@@ -49,36 +43,6 @@ Here's my other tools accounts.
   
 [Back to contents table](#contents-table)
   
-  <h2> Spend considerations 🤑 </h2> 
-  
- I have reviewed this as part of the AWS-CLF-C01 video of Andrew (big thanks to him for my certification) a couple of months ago, it was great to know how i can be spend and wasting money at some point if i don't use my budget and billing tools available. When entering to my billing dashboard i received a disclaimer that there were some IAM policies being updated, however my IAM user didn't need any update at all. I created my aws account around 6 months ago and haven't used it since the certification. I had EC2 and Cloudwatch services running with no charges (thank god!)
-  
-![image](https://user-images.githubusercontent.com/49325152/218631336-e8f927af-cc96-44a2-9c67-4ca2f1b4d1c7.png)
-
-While reviewing Chirag's video i was not able to get billing information for my IAM account correctly so i had to look up for AWS documentation for help on this and i found this article which was very helpful: (https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_billing.html?icmpid=docs_iam_console#tutorial-billing-step1)
-  
-## Budget
-  
-![imagen](https://user-images.githubusercontent.com/49325152/219922251-d5b29a73-60a9-4213-b827-44415922743b.png)
-  
-[Back to contents table](#contents-table)
- 
-## Cloudwatch billing alarm
- 
-I configured the Cloudwatch billing alarm and recieve my first notification 😎
-  
-  ![imagen](https://user-images.githubusercontent.com/49325152/219927405-80e4dc78-3d4d-4f6e-9b3a-03c40d9ec347.png)
-
-  ![image](https://user-images.githubusercontent.com/49325152/218633050-fa1ea6d2-8e40-48d2-b3f0-0b6ab07e07a3.png)
-
-Watching the video was useful to see the how much money i've spent and i hope that by the end of this project my spent is as unexpensive as possible.
- 
-[Back to contents table](#contents-table)
-  
-  <h2> Cloud Security 🔏 </h2>
-  
-Watching an hour video seems interesting for me, however some concepts reviewd on the CLF-C01 cert course, such as IAM, but this Cloud security concept is something 'll definetily look into from now on. I think that services, data and app that is cloud-enabled is even more vulnerable to attacks as there are more attack surfaces being publicly available and even private.
-  
 ## AWS CLI setup
 
 AWS CLI tool installed via Gitpod Terminal using:
@@ -95,7 +59,61 @@ AWS CLI tool installed via Gitpod Terminal using:
 
  
   ![imagen](https://user-images.githubusercontent.com/49325152/219926989-6cea0a3c-ebf1-4e32-afbe-7e34b76bb6fe.png)
+ 
+[Back to contents table](#contents-table)
   
+  <h2> Spend considerations 🤑 </h2> 
+  
+ I have reviewed this as part of the AWS-CLF-C01 video of Andrew (big thanks to him for my certification) a couple of months ago, it was great to know how i can be spend and wasting money at some point if i don't use my budget and billing tools available. When entering to my billing dashboard i received a disclaimer that there were some IAM policies being updated, however my IAM user didn't need any update at all. I created my aws account around 6 months ago and haven't used it since the certification. I had EC2 and Cloudwatch services running with no charges (thank god!)
+  
+![image](https://user-images.githubusercontent.com/49325152/218631336-e8f927af-cc96-44a2-9c67-4ca2f1b4d1c7.png)
+
+While reviewing Chirag's video i was not able to get billing information for my IAM account correctly so i had to look up for AWS documentation for help on this and i found this article which was very helpful: (https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_billing.html?icmpid=docs_iam_console#tutorial-billing-step1)
+  
+## Budget
+  
+I've created the Budget via the AWS management console:
+  
+![imagen](https://user-images.githubusercontent.com/49325152/219922251-d5b29a73-60a9-4213-b827-44415922743b.png)
+  
+I deleted that one and created another one via AWS CLI:
+
+  ![imagen](https://user-images.githubusercontent.com/49325152/219984125-d1f74758-d7c7-4742-a679-38a46ec62b37.png)
+
+![imagen](https://user-images.githubusercontent.com/49325152/219983984-84894ad7-ff67-4560-a2ea-84df4ad4c67d.png)
+  
+![imagen](https://user-images.githubusercontent.com/49325152/219984015-3095ce6c-2b81-48b9-a2e9-86a9bb084371.png)
+  
+[Back to contents table](#contents-table)
+ 
+## Billing alarm
+ 
+I configured the Cloudwatch billing alarm and recieve my first notification 😎
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219927405-80e4dc78-3d4d-4f6e-9b3a-03c40d9ec347.png)
+
+  ![image](https://user-images.githubusercontent.com/49325152/218633050-fa1ea6d2-8e40-48d2-b3f0-0b6ab07e07a3.png)
+
+Watching the video was useful to see the how much money i've spent and i hope that by the end of this project my spent is as unexpensive as possible.
+
+  ### Billing alarm via CLI
+  
+  I've configured the SNS topic, configuring an endpoint and putting my email:
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219985035-94ea43a9-8b83-4410-bff1-e7bf8854975f.png)
+   
+  ![imagen](https://user-images.githubusercontent.com/49325152/219985101-37811bfe-6153-4a44-b9b0-6a6f16a2ed12.png)
+
+  We can see both the Cloudwatch and SNS (via CLI) subscription.
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219985775-b54861ec-4ce6-4e20-88f3-d8b7a786cb57.png)
+ 
+[Back to contents table](#contents-table)
+  
+  <h2> Cloud Security 🔏 </h2>
+  
+Watching an hour video seems interesting for me, however some concepts reviewd on the CLF-C01 cert course, such as IAM, but this Cloud security concept is something 'll definetily look into from now on. I think that services, data and app that is cloud-enabled is even more vulnerable to attacks as there are more attack surfaces being publicly available and even private.
+    
 ## AWS organizations account
 
 I've done already the MFA for my root and IAM admin account, so i just did a refresher there and created my AWS Organizations account:
@@ -106,11 +124,13 @@ Moving forward, I've reviewed the AWS Cloudtrail functionalities and how benefit
 
 IAM users, roles, groups and policies have been checkd for my account as part of the certification course, so i had that already covered, anyways it's a great refresher. 
  
- I've copied the recommended CSPs provided by Ashish:
+ I've copied the recommended SCPs provided by Ashish:
 
-![image](https://user-images.githubusercontent.com/49325152/218886334-8abe6cab-cb7a-4479-aeff-7b6f3a5af3db.png)
-
+![imagen](https://user-images.githubusercontent.com/49325152/219992241-2947ccfc-4fe5-4a19-bc2f-41931ac1b502.png)
+  
 It was difficult for me to understand the difference between regular policies and SCPs, but the general idea of the policies was understood and i really like the concept of configuring and managing them (as well as many other AWS services). 
+  
+  [Back to contents table](#contents-table)
  
   <h2> Diagrams 👀 </h2>
 
@@ -136,4 +156,23 @@ Watching Andrew's video was very useful to know how to get external shapes and i
 
 https://lucid.app/lucidchart/596703a1-f23f-4943-a12f-844adec9ef11/edit?viewport_loc=-622%2C-45%2C2994%2C1430%2C0_0&invitationId=inv_531edbcc-542d-4bfd-9298-b3581ddc90a2
 
-      
+[Back to contents table](#contents-table)
+  
+  ## Homework challenges
+  
+  ### Destroy your root account credentials, Set MFA, IAM role
+  
+   ![image](https://user-images.githubusercontent.com/49325152/219844208-20e2613b-a3d9-40b7-8551-db8f7b6f2e43.png)
+  
+  ![image](https://user-images.githubusercontent.com/49325152/219846030-55829f7f-4aa3-474d-be51-1fed287b9317.png)
+  
+  ###  Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue.
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219993920-d122a872-d0b6-4c92-b918-4b8e60c4a22e.png)
+
+![imagen](https://user-images.githubusercontent.com/49325152/219994326-90c3f8e4-330c-480e-84f8-8b4294508d94.png)
+  
+### Review all the questions of each pillars in the Well Architected Tool (No specialized lens)
+  
+  ![imagen](https://user-images.githubusercontent.com/49325152/219997431-e82bdb14-4c0f-475e-b092-55a779d9f74b.png)
+
