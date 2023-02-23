@@ -61,7 +61,7 @@ I have no idea why the port 8000, 5432 and 46093 were opened:
 
 ![image](https://user-images.githubusercontent.com/49325152/220786496-189c2f7d-e127-48e8-8314-7a1317450353.png)
 
-## Docker commit  ✅
+## Docker commit 
 
 I encounter this error when trying to committ from gitpod:
 
