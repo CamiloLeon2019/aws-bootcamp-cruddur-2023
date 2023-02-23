@@ -2,8 +2,9 @@
 
 ## Contents table
 
-[Setting up container environmnent}(#Setting-up-environment)
-[Setting up container environmnent}(#Setting-up-environment)
+- [Setting up container environment](#setting-up-environment)
+- [Issues committing](#docker-commit)
+
 
 ### Setting up environment
 
@@ -59,4 +60,14 @@ I have no idea why the port 8000, 5432 and 46093 were opened:
 ![image](https://user-images.githubusercontent.com/49325152/220785781-292f5fa4-5381-45bf-ab6c-074854a27ca8.png)
 
 ![image](https://user-images.githubusercontent.com/49325152/220786496-189c2f7d-e127-48e8-8314-7a1317450353.png)
+
+## Docker commit  ✅
+
+I encounter this error when trying to committ from gitpod:
+
+![image](https://user-images.githubusercontent.com/49325152/220798269-3676369b-86f2-48d1-bde3-4c0693f710e7.png)
+
+![image](https://user-images.githubusercontent.com/49325152/220798671-d7d2d5c6-8aad-4fd1-a227-1895a7bd8f2e.png)
+
+![image](https://user-images.githubusercontent.com/49325152/220798206-2f58f745-c99c-46a9-ae39-31472b91e03d.png)
 
