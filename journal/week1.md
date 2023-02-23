@@ -2,8 +2,9 @@
 
 ## Contents table
 
-[Setting up container environmnent}(#Setting-up-environment)
-[Setting up container environmnent}(#Setting-up-environment)
+- [Setting up container environment](#setting-up-environment)
+- [Issues committing](#docker-commit)
+- [Notifications endpoint](#notifications-endpoint)
 
 ### Setting up environment
 
@@ -59,4 +60,48 @@ I have no idea why the port 8000, 5432 and 46093 were opened:
 ![image](https://user-images.githubusercontent.com/49325152/220785781-292f5fa4-5381-45bf-ab6c-074854a27ca8.png)
 
 ![image](https://user-images.githubusercontent.com/49325152/220786496-189c2f7d-e127-48e8-8314-7a1317450353.png)
+
+## Docker commit 
+
+I encounter this error when trying to committ from gitpod:
+
+![image](https://user-images.githubusercontent.com/49325152/220798269-3676369b-86f2-48d1-bde3-4c0693f710e7.png)
+
+![image](https://user-images.githubusercontent.com/49325152/220798671-d7d2d5c6-8aad-4fd1-a227-1895a7bd8f2e.png)
+
+![image](https://user-images.githubusercontent.com/49325152/220798206-2f58f745-c99c-46a9-ae39-31472b91e03d.png)
+
+
+DRAFT FOR LOOKING OUT ON HOW TO COMMIT ON A DIFFERENT BRANCH FROM CMD
+
+
+## Notifications endpoint
+
+We create a new notification endpoint on openapi yml file (its preview feature for checking on api object is great) by adding a new path, we add /api/activities/notifications there and copy he content from another endpoint to use as a guide, we did it this time from home:
+
+```
+  /api/activities/notifications:
+    get:
+      description: 'Return a feed on activity for all of the followers and people i follow'
+      tags:
+        - activities
+      parameters: []
+      responses:
+        '200':
+          description: Returns an array of activities
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Activity'
+
+```
+Also, to have this information on the backend we need to modify the app.py file adding a new route there, the same name as we put on the yml file, we also need to create a new service on our services folder which will be the one where notifications_activities.py will be stored to have the objects retrieved:
+
+![image](https://user-images.githubusercontent.com/49325152/220805859-49f5e077-5d86-4aae-83d5-175a6f1b1249.png)
+
+Now, for the frontend side
+
+![image](https://user-images.githubusercontent.com/49325152/220806610-cd6213d1-30d3-4274-b975-1b68e5317498.png)
 
