@@ -160,7 +160,9 @@ paths:
           content:
             application/json:
               schema:
-                type:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Activity'
 
 components:
   schemas:
