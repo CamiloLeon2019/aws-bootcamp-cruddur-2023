@@ -101,7 +101,14 @@ Also, to have this information on the backend we need to modify the app.py file 
 
 ![image](https://user-images.githubusercontent.com/49325152/220805859-49f5e077-5d86-4aae-83d5-175a6f1b1249.png)
 
-Now, for the frontend side
+Now, for the frontend side, we need to create new files for the js and css, basically by copying the same format from the Home page and sycnronizing the backend with the frontend by using:
+
+```
+ const backend_url = `${process.env.REACT_APP_BACKEND_URL}/api/activities/notifications`
+```
 
 ![image](https://user-images.githubusercontent.com/49325152/220806610-cd6213d1-30d3-4274-b975-1b68e5317498.png)
+
+Once that is syncronized we can do Composer up, npm install for the frontend and run the server:
+
 
