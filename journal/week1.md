@@ -5,8 +5,9 @@
 - [Setting up container environment](#setting-up-environment)
 - [Issues committing](#docker-commit)
 - [Notifications endpoint](#notifications-endpoint)
+- [Postgres and DynamoDB installation](#db-install)
 
-### Setting up environment
+## Setting up environment
 
 #### Installing backend
 
@@ -28,6 +29,8 @@ python3 -m flask run --host=0.0.0.0 --port=4567
 ![image](https://user-images.githubusercontent.com/49325152/220764152-45cb0f1f-7c10-4f28-9ec0-4700b533419d.png)
 ![image](https://user-images.githubusercontent.com/49325152/220764754-66187c42-ac6c-4d3c-9868-798116232b06.png)
 
+[Go back to top](#contents-table)
+
 #### Building and running container
 
 ```
@@ -40,6 +43,8 @@ Curiousily this time it shows the json file formatted
 Docker process being shown:
 
 ![image](https://user-images.githubusercontent.com/49325152/220776930-23a36cab-111a-4ba4-adca-75dde12a1bb4.png)
+
+[Go back to top](#contents-table)
 
 ### Installing frontend
 
@@ -61,6 +66,8 @@ I have no idea why the port 8000, 5432 and 46093 were opened:
 
 ![image](https://user-images.githubusercontent.com/49325152/220786496-189c2f7d-e127-48e8-8314-7a1317450353.png)
 
+[Go back to top](#contents-table)
+
 ## Docker commit 
 
 I encounter this error when trying to committ from gitpod:
@@ -77,8 +84,11 @@ I had to understand the output a little better in order to committ correctly:
 
 ![image](https://user-images.githubusercontent.com/49325152/220798206-2f58f745-c99c-46a9-ae39-31472b91e03d.png)
 
+[Go back to top](#contents-table)
+
 ## Notifications endpoint
 
+### Backend
 We create a new notification endpoint on openapi yml file (its preview feature for checking on api object is great) by adding a new path, we add /api/activities/notifications there and copy he content from another endpoint to use as a guide, we did it this time from home:
 
 ```
@@ -103,7 +113,9 @@ Also, to have this information on the backend we need to modify the app.py file 
 
 ![image](https://user-images.githubusercontent.com/49325152/220805859-49f5e077-5d86-4aae-83d5-175a6f1b1249.png)
 
-Now, for the frontend side, we need to create new files for the js and css, basically by copying the same format from the Home page and sycnronizing the backend with the frontend by using:
+### Frontend
+
+We need to create new files for the js and css, basically by copying the same format from the Home page and sycnronizing the backend with the frontend by using:
 
 ```
  const backend_url = `${process.env.REACT_APP_BACKEND_URL}/api/activities/notifications`
@@ -115,5 +127,41 @@ Once that is syncronized we can do Composer up, npm install for the frontend and
 
 ![image](https://user-images.githubusercontent.com/49325152/221374352-ae26322a-a88a-4686-b135-74b1f4691d39.png)
 
+## DB install
 
+### Postgres
+
+On docker-compose.yml:
+
+````
+  db:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+````
+
+### DynamoDB
+
+````
+  dynamodb-local:
+    # https://stackoverflow.com/questions/67533058/persist-local-dynamodb-data-in-volumes-lack-permission-unable-to-open-databa
+    # We needed to add user:root to get this working.
+    user: root
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./docker/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+````
+
+[Go back to top](#contents-table)
 
