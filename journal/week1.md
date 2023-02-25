@@ -69,11 +69,13 @@ I encounter this error when trying to committ from gitpod:
 
 ![image](https://user-images.githubusercontent.com/49325152/220798671-d7d2d5c6-8aad-4fd1-a227-1895a7bd8f2e.png)
 
+I had to understand the output a little better in order to committ correctly:
+
+    git config pull.rebase false: this will merge the changes from the remote branch into your local branch.
+    git config pull.rebase true: this will reapply your local changes on top of the changes from the remote branch.
+    git config pull.ff only: this will only allow fast-forward merges, which means that your local branch will be updated only if the changes from the remote branch can be applied cleanly on top of your local changes.
+
 ![image](https://user-images.githubusercontent.com/49325152/220798206-2f58f745-c99c-46a9-ae39-31472b91e03d.png)
-
-
-DRAFT FOR LOOKING OUT ON HOW TO COMMIT ON A DIFFERENT BRANCH FROM CMD
-
 
 ## Notifications endpoint
 
@@ -110,5 +112,8 @@ Now, for the frontend side, we need to create new files for the js and css, basi
 ![image](https://user-images.githubusercontent.com/49325152/220806610-cd6213d1-30d3-4274-b975-1b68e5317498.png)
 
 Once that is syncronized we can do Composer up, npm install for the frontend and run the server:
+
+![image](https://user-images.githubusercontent.com/49325152/221374352-ae26322a-a88a-4686-b135-74b1f4691d39.png)
+
 
 
