@@ -146,6 +146,28 @@ On docker-compose.yml:
       - db:/var/lib/postgresql/data
 ````
 
+Gitpod does not come with a PostgreSQL client pre-installed, so we need to install it manually with:
+
+````
+  - name: postgres
+    init: |
+      curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+      echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+      sudo apt update
+      sudo apt install -y postgresql-client-13 libpq-dev
+````
+
+After applying such commmands there i got the same error as Andrew:
+
+![image](https://user-images.githubusercontent.com/49325152/221387313-16a65990-a754-48bc-a5db-572c446d1eb8.png)
+
+So, it requires the host argument to look for the localhost, so we use:
+````
+psql -Upostgres --host localhost
+````
+
+![image](https://user-images.githubusercontent.com/49325152/221387748-65052dee-14c4-4c0e-9425-c861bccd366c.png)
+
 ### DynamoDB
 
 ````
