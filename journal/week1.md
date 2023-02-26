@@ -6,6 +6,7 @@
 - [Issues committing](#docker-commit)
 - [Notifications endpoint](#notifications-endpoint)
 - [Postgres and DynamoDB installation](#db-install)
+- [Docker on Windows](#docker-on-windows)
 
 ## Setting up environment
 
