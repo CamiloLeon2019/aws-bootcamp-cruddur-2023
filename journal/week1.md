@@ -190,3 +190,12 @@ psql -Upostgres --host localhost
 
 [Go back to top](#contents-table)
 
+## Docker on Windows
+
+After installing Docker on my laptop, i needed to upload the WSL kernel for my machine:
+
+![image](https://user-images.githubusercontent.com/49325152/221442423-2dc0afbd-3116-4b77-a780-04e41f7f7e48.png)
+
+I had to follow this guide to enable the Windows Subsystem for Linux: https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
+
+
