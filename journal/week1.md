@@ -198,4 +198,7 @@ After installing Docker on my laptop, i needed to upload the WSL kernel for my m
 
 I had to follow this guide to enable the Windows Subsystem for Linux: https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
 
+After performing the steps described there, Docker has been installed on my computer:
+
+![image](https://user-images.githubusercontent.com/49325152/221444083-1e27bf67-50cd-40be-b099-437449566ee2.png)
 
