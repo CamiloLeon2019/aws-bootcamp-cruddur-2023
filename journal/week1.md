@@ -168,6 +168,9 @@ psql -Upostgres --host localhost
 
 ![image](https://user-images.githubusercontent.com/49325152/221387748-65052dee-14c4-4c0e-9425-c861bccd366c.png)
 
+![image](https://user-images.githubusercontent.com/49325152/221387881-d764da86-25c3-4dee-a603-71e7b87082f2.png)
+
+
 ### DynamoDB
 
 ````
