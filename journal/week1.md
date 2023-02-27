@@ -200,6 +200,8 @@ psql -Upostgres --host localhost
 
 [Go back to top](#contents-table)
 
+# Homework challenges
+
 ## Docker on Windows
 
 After installing Docker on my laptop, i needed to upload the WSL kernel for my machine:
@@ -247,3 +249,20 @@ CMD ["/script.sh"]
 Once each dockerfile has been modified, we can run the Compose Up without issues:
 
 ![image](https://user-images.githubusercontent.com/49325152/221450454-6b41078e-6998-4c36-adac-39b59673790b.png)
+
+## image to dockerhub
+
+I didn't look for the GUI option to perform the tag and push, so i did it through powershell, so i used this commands to create an image tagged for the frontend ( i did the same for the backend):
+
+````
+docker tag frontend-react-js playersslayer96/cruddur-frontend:v1.0
+
+````
+Then a similar command to push this container to DockerHub:
+
+````
+docker push playersslayer96/cruddur-frontend:v1.0
+````
+
+![image](https://user-images.githubusercontent.com/49325152/221459272-c37c73e5-f066-42b7-857b-63f787955f2c.png)
+
