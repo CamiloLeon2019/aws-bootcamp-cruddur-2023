@@ -4,9 +4,11 @@
 
 - [Setting up container environment](#setting-up-environment)
 - [Issues committing](#docker-commit)
+- [Container security](#container-security)
 - [Notifications endpoint](#notifications-endpoint)
 - [Postgres and DynamoDB installation](#db-install)
 - [Docker on Windows](#docker-on-windows)
+- [CMD as a script](#cmd-as-a-script)
 
 ## Setting up environment
 
@@ -86,6 +88,13 @@ I had to understand the output a little better in order to committ correctly:
 ![image](https://user-images.githubusercontent.com/49325152/220798206-2f58f745-c99c-46a9-ae39-31472b91e03d.png)
 
 [Go back to top](#contents-table)
+
+## Container security
+
+I've added the Snyk open-source connection to my repo and made the analysis to it:
+
+![image](https://user-images.githubusercontent.com/49325152/221446034-68d010c4-6c5d-416b-982f-858a4ac6b633.png)
+
 
 ## Notifications endpoint
 
@@ -203,3 +212,38 @@ After performing the steps described there, Docker has been installed on my comp
 
 ![image](https://user-images.githubusercontent.com/49325152/221444083-1e27bf67-50cd-40be-b099-437449566ee2.png)
 
+Then i was able to get the container build and run through powershell and i also realizae that this can be done via GUI:
+
+![image](https://user-images.githubusercontent.com/49325152/221446899-1cbecfef-edac-49e9-bbf9-8740daeb5bc2.png)
+
+![image](https://user-images.githubusercontent.com/49325152/221447221-f849e171-ec19-4bcc-9f3a-794d60261640.png)
+
+[Go back to top](#contents-table)
+
+## CMD as a script
+
+On each container we should create a bash file on which we include the same commands that go between the "" on the CMD[]. For example, for the flask one:
+
+````
+#!/bin/bash
+
+python3 -m flask run --host=0.0.0.0 --port=4567
+
+````
+
+Then on each container Dockerfile we include the following instructions
+
+````
+# Copy the script into the container
+COPY script.sh /
+
+# Make the script executable
+RUN chmod +x /script.sh
+
+# Set the CMD instruction to run the script
+CMD ["/script.sh"]
+````
+
+Once each dockerfile has been modified, we can run the Compose Up without issues:
+
+![image](https://user-images.githubusercontent.com/49325152/221450454-6b41078e-6998-4c36-adac-39b59673790b.png)
