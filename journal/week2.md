@@ -33,4 +33,25 @@ with tracer.start_as_current_span("mock-data"):
 
 With this we are able to get general data from the home dashboard and we can apply the same to other dashboards as well:
 
+## Adding custom spans
+
+I've added a custom span using the same logic as the one used for the app.now and result.lenght spans. I have done it on the notifications_activities.py to get it on a different dashboard:
+
+````
+    with tracer.start_as_current_span("home-notifications-mock-data"):
+      span = trace.get_current_span()
+    now = datetime.now(timezone.utc).astimezone()
+    results = [{
+      'uuid': '68f126b0-1ceb-4a33-88be-d90fa7109eee',
+      'handle': 'Camilo Leon',
  
+ ...
+    span.set_attribute("app.user_name", results[0]['handle'])
+    return results
+````
+
+![image](https://user-images.githubusercontent.com/49325152/222802051-76cf141b-ab24-4615-b340-70d88586fe02.png)
+
+However, i do not get the username string span as i planned:
+
+![image](https://user-images.githubusercontent.com/49325152/222802823-2cba732c-043f-4709-b9a4-5a2d60a71d4f.png)
