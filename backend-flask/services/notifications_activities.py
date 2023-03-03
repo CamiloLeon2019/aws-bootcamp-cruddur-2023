@@ -1,10 +1,15 @@
 from datetime import datetime, timedelta, timezone
+from opentelemetry import trace
+
+tracer = trace.get_tracer("home.notifications")
 class NotificationsActivities:
   def run():
+    with tracer.start_as_current_span("home-notifications-mock-data"):
+      span = trace.get_current_span()
     now = datetime.now(timezone.utc).astimezone()
     results = [{
       'uuid': '68f126b0-1ceb-4a33-88be-d90fa7109eee',
-      'handle':  'Camilo Leon',
+      'handle': 'Camilo Leon',
       'message': 'Finally it has worked!',
       'created_at': (now - timedelta(days=2)).isoformat(),
       'expires_at': (now + timedelta(days=5)).isoformat(),
@@ -23,4 +28,5 @@ class NotificationsActivities:
       }],
     }
     ]
+    span.set_attribute("app.user_name", results[0]['handle'])
     return results
