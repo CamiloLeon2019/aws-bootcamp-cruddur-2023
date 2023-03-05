@@ -2,9 +2,11 @@
 
 ## Contents table
 
-- [Setting up container environment](#setting-up-environment)
+- [Setting up container environment](#setting-up-honeycomb)
+- [Observability vs Monitoring](#observability-vs-monitoring)
 
-## Settign up Honeycomb
+
+## Setting up Honeycomb
 
 I watched Shala's video before this week as part of the prereqs for the ACBP (AWS Cloud Bootcampo Project), so i generated the API Key and enabled it on the gp env variables:
 
@@ -24,18 +26,19 @@ from opentelemetry import trace
 tracer = trace.get_tracer("home.activities")
 
 ````
+## Observability vs Monitoring
 
-We are able to get multiple traces, however we need to provide even more context, so we use:
+Having a brief look into Chirag's video about these two topics about logging from our applications, provides me a concept that Monitoring is about what is important to you and Observability is doing a deep look into what is going on. So, the Monitoring part of your application collects as much logs as possible and triggers and alert as soon as something is wrong, while Observability checks on the behavior of the application and provides you with the context to know what specifically is going on.
 
-````
-with tracer.start_as_current_span("mock-data"):
-````
+![image](https://user-images.githubusercontent.com/49325152/222877833-aa20c612-ec4a-49f5-a797-08abb0bf1663.png)
 
-With this we are able to get general data from the home dashboard and we can apply the same to other dashboards as well:
+I created a CloudTrail trail and storing the CloudWatch logs on a new S3 bucket:
 
-## Adding custom spans
+![image](https://user-images.githubusercontent.com/49325152/222937792-ea1df54f-a603-4bcf-af6e-bcd53317af61.png)
 
-I've added a custom span using the same logic as the one used for the app.now and result.lenght spans. I have done it on the notifications_activities.py to get it on a different dashboard:
+## Custom spans
+
+We are able to get multiple traces to get general data from the home dashboard (to a obtain information about the current timestamp and the result length (200 HTTP code). We can apply the same to other dashboards as well, so I've added a custom span using the same logic as the one used for the app.now and result.lenght spans. I have done it on the notifications_activities.py to get it on a different dashboard:
 
 ````
     with tracer.start_as_current_span("home-notifications-mock-data"):
