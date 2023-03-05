@@ -2,13 +2,15 @@
 
 ## Contents table
 
-- [Setting up container environment](#setting-up-honeycomb)
+- [Setting up tracing](#setting-up-tracing-on-different-platforms)
 - [Observability vs Monitoring](#observability-vs-monitoring)
 
 
-## Setting up Honeycomb
+# Setting up tracing on different platforms
 
-I watched Shala's video before this week as part of the prereqs for the ACBP (AWS Cloud Bootcampo Project), so i generated the API Key and enabled it on the gp env variables:
+## Honeycomb
+
+I watched Shala's video before this week as part of the prereqs for the ACBP (AWS Cloud Bootcamp Project), so i generated the API Key and enabled it on the gp env variables:
 
 ![image](https://user-images.githubusercontent.com/49325152/221980460-95c1d643-81b1-418a-9945-9d9bb48637c3.png)
 
@@ -26,6 +28,22 @@ from opentelemetry import trace
 tracer = trace.get_tracer("home.activities")
 
 ````
+
+## X-Ray
+
+Traces on X-ray being shown 
+
+![image](https://user-images.githubusercontent.com/49325152/222942277-68175e3e-247e-4126-937e-74b6c059b92d.png)
+
+## Cloudwatch logs
+
+Logs group for backend-flask 
+
+![image](https://user-images.githubusercontent.com/49325152/222942294-8b490ce7-8c43-494a-b424-aad0712abb0f.png)
+
+![image](https://user-images.githubusercontent.com/49325152/222942197-4f2c25d3-6b06-40ca-a659-b0ab9d1d17aa.png)
+
+
 ## Observability vs Monitoring
 
 Having a brief look into Chirag's video about these two topics about logging from our applications, provides me a concept that Monitoring is about what is important to you and Observability is doing a deep look into what is going on. So, the Monitoring part of your application collects as much logs as possible and triggers and alert as soon as something is wrong, while Observability checks on the behavior of the application and provides you with the context to know what specifically is going on.
