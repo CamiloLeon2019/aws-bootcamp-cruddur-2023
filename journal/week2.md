@@ -4,7 +4,7 @@
 
 - [Setting up tracing](#setting-up-tracing-on-different-platforms)
 - [Observability vs Monitoring](#observability-vs-monitoring)
-- [My Cloud Journey]
+- [My Cloud Journey](#my-cloud-journey)
 
 
 # Setting up tracing on different platforms
