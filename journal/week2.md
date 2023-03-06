@@ -68,6 +68,19 @@ I've reviewed 5 open positions available through Glassdoor and LinkedIn:
 ![imagen](https://user-images.githubusercontent.com/49325152/222986525-8369978f-73e7-428e-bdc9-c1e1044d5edd.png)
 ![imagen](https://user-images.githubusercontent.com/49325152/222986529-15325e6b-752b-4165-842e-2e544d15fbf6.png)
 
+## Adding Rollbar
+
+I've been trying to get access to rollbar, however it seems their page is having login issues:
+
+![image](https://user-images.githubusercontent.com/49325152/223019791-ca0171a1-1521-4c7c-8bb3-0f63720205b8.png)
+
+![image](https://user-images.githubusercontent.com/49325152/223019795-7620395a-220a-4878-bdad-1236df9f5e50.png)
+
+I added the rollbar instrumentation and route on the backend app, however it seems i am getting difficulties on the rollbar integration:
+
+![image](https://user-images.githubusercontent.com/49325152/223019938-6b28e73a-c37c-407b-b6aa-6bfc57bfe7a0.png)
+
+
 ## Custom spans
 
 We are able to get multiple traces to get general data from the home dashboard (to a obtain information about the current timestamp and the result length (200 HTTP code). We can apply the same to other dashboards as well, so I've added a custom span using the same logic as the one used for the app.now and result.lenght spans. I have done it on the notifications_activities.py to get it on a different dashboard:
