@@ -4,6 +4,7 @@
 
 - [Setting up tracing](#setting-up-tracing-on-different-platforms)
 - [Observability vs Monitoring](#observability-vs-monitoring)
+- [My Cloud Journey]
 
 
 # Setting up tracing on different platforms
@@ -43,7 +44,6 @@ Logs group for backend-flask
 
 ![image](https://user-images.githubusercontent.com/49325152/222942197-4f2c25d3-6b06-40ca-a659-b0ab9d1d17aa.png)
 
-
 ## Observability vs Monitoring
 
 Having a brief look into Chirag's video about these two topics about logging from our applications, provides me a concept that Monitoring is about what is important to you and Observability is doing a deep look into what is going on. So, the Monitoring part of your application collects as much logs as possible and triggers and alert as soon as something is wrong, while Observability checks on the behavior of the application and provides you with the context to know what specifically is going on.
@@ -53,6 +53,20 @@ Having a brief look into Chirag's video about these two topics about logging fro
 I created a CloudTrail trail and storing the CloudWatch logs on a new S3 bucket:
 
 ![image](https://user-images.githubusercontent.com/49325152/222937792-ea1df54f-a603-4bcf-af6e-bcd53317af61.png)
+
+## My Cloud Journey
+
+I've watched Open Up The Cloud video about the cloud roles available for me and do the homework:
+
+![imagen](https://user-images.githubusercontent.com/49325152/222986620-6f17f106-f2b7-48f6-b401-592d48eb6539.png)
+
+I've reviewed 5 open positions available through Glassdoor and LinkedIn:
+
+![imagen](https://user-images.githubusercontent.com/49325152/222986502-30befb65-87dd-49a4-accf-e16d35857688.png)
+![imagen](https://user-images.githubusercontent.com/49325152/222986508-e983d42e-bfec-40ac-baae-8405c8e026c6.png)
+![imagen](https://user-images.githubusercontent.com/49325152/222986515-d4af84c4-1729-472d-adfc-004587bd6819.png)
+![imagen](https://user-images.githubusercontent.com/49325152/222986525-8369978f-73e7-428e-bdc9-c1e1044d5edd.png)
+![imagen](https://user-images.githubusercontent.com/49325152/222986529-15325e6b-752b-4165-842e-2e544d15fbf6.png)
 
 ## Custom spans
 
