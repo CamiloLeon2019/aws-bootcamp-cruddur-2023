@@ -5,7 +5,7 @@
 - [Setting up tracing](#setting-up-tracing-on-different-platforms)
 - [Observability vs Monitoring](#observability-vs-monitoring)
 - [My Cloud Journey](#my-cloud-journey)
-
+- [Homework challenges](#homework-challenges)
 
 # Setting up tracing on different platforms
 
@@ -30,11 +30,15 @@ tracer = trace.get_tracer("home.activities")
 
 ````
 
+[Go to top](#contents-table)
+
 ## X-Ray
 
 Traces on X-ray being shown 
 
 ![image](https://user-images.githubusercontent.com/49325152/222942277-68175e3e-247e-4126-937e-74b6c059b92d.png)
+
+[Go to top](#contents-table)
 
 ## Cloudwatch logs
 
@@ -43,6 +47,28 @@ Logs group for backend-flask
 ![image](https://user-images.githubusercontent.com/49325152/222942294-8b490ce7-8c43-494a-b424-aad0712abb0f.png)
 
 ![image](https://user-images.githubusercontent.com/49325152/222942197-4f2c25d3-6b06-40ca-a659-b0ab9d1d17aa.png)
+
+[Go to top](#contents-table)
+
+## Adding Rollbar
+
+I've been trying to get access to rollbar, however it seems their page is having login issues:
+
+![image](https://user-images.githubusercontent.com/49325152/223019791-ca0171a1-1521-4c7c-8bb3-0f63720205b8.png)
+
+![image](https://user-images.githubusercontent.com/49325152/223019795-7620395a-220a-4878-bdad-1236df9f5e50.png)
+
+I added the rollbar instrumentation and route on the backend app, however it seems i am getting difficulties on the rollbar integration:
+
+![image](https://user-images.githubusercontent.com/49325152/223019938-6b28e73a-c37c-407b-b6aa-6bfc57bfe7a0.png)
+
+I ended up hard coding the rollbar access token to the code and obtaining data and errors:
+
+![image](https://user-images.githubusercontent.com/49325152/223322676-08014fa4-17f0-4990-b8f9-86d5918a0510.png)
+
+![image](https://user-images.githubusercontent.com/49325152/223322748-4fa35b49-1460-419c-bb76-45c54650aa7e.png)
+
+[Go to top](#contents-table)
 
 ## Observability vs Monitoring
 
@@ -53,6 +79,8 @@ Having a brief look into Chirag's video about these two topics about logging fro
 I created a CloudTrail trail and storing the CloudWatch logs on a new S3 bucket:
 
 ![image](https://user-images.githubusercontent.com/49325152/222937792-ea1df54f-a603-4bcf-af6e-bcd53317af61.png)
+
+[Go to top](#contents-table)
 
 ## My Cloud Journey
 
@@ -68,18 +96,9 @@ I've reviewed 5 open positions available through Glassdoor and LinkedIn:
 ![imagen](https://user-images.githubusercontent.com/49325152/222986525-8369978f-73e7-428e-bdc9-c1e1044d5edd.png)
 ![imagen](https://user-images.githubusercontent.com/49325152/222986529-15325e6b-752b-4165-842e-2e544d15fbf6.png)
 
-## Adding Rollbar
+[Go to top](#contents-table)
 
-I've been trying to get access to rollbar, however it seems their page is having login issues:
-
-![image](https://user-images.githubusercontent.com/49325152/223019791-ca0171a1-1521-4c7c-8bb3-0f63720205b8.png)
-
-![image](https://user-images.githubusercontent.com/49325152/223019795-7620395a-220a-4878-bdad-1236df9f5e50.png)
-
-I added the rollbar instrumentation and route on the backend app, however it seems i am getting difficulties on the rollbar integration:
-
-![image](https://user-images.githubusercontent.com/49325152/223019938-6b28e73a-c37c-407b-b6aa-6bfc57bfe7a0.png)
-
+# Homework challenges 
 
 ## Custom spans
 
@@ -103,3 +122,27 @@ We are able to get multiple traces to get general data from the home dashboard (
 However, i do not get the username string span as i planned:
 
 ![image](https://user-images.githubusercontent.com/49325152/222802823-2cba732c-043f-4709-b9a4-5a2d60a71d4f.png)
+
+I realized that the big mistake i made and i should have though before (silly me!) is the indentation of the span and set_attributes:
+
+![image](https://user-images.githubusercontent.com/49325152/223323176-b64ee3ce-5d3f-4fc5-8a27-37e21e36b80d.png)
+
+Now, i see the user name that was hard coded on the notifications app as an attribute of the honeycomb span created:
+
+![image](https://user-images.githubusercontent.com/49325152/223323417-cb555b5a-af2a-4bcd-a25c-0fffe4859db5.png)
+
+[Go to top](#contents-table)
+
+## Custom query 
+
+I've added a new query on Honeycomb where i was able to get the average duration of a request, the maximum and how many of them, grouping them by the user name attribute i created on the notifications section:
+
+![image](https://user-images.githubusercontent.com/49325152/223326014-f4aa4307-b6be-4fc9-ab9d-29852a2e98ee.png)
+
+![image](https://user-images.githubusercontent.com/49325152/223326146-b893cd42-ee1b-4a69-9705-934696dcd08f.png)
+
+I've also added a new board where this query is shown:
+
+![image](https://user-images.githubusercontent.com/49325152/223326346-63f223f8-662d-402d-af0c-8188df1757f5.png)
+
+[Go to top](#contents-table)
