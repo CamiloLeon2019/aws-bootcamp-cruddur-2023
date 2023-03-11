@@ -28,6 +28,8 @@ Amplify.configure({
 });
 ````
 
+### Sign-in
+
 Obtaining the following error on the sign-in as expected:
 
 ![image](https://user-images.githubusercontent.com/49325152/224176594-d00f0a56-7628-4c5c-bc34-6ad3adf90d77.png)
@@ -36,4 +38,14 @@ However, after doing the 'user creation' i've received a similar error by consol
 
 ![image](https://user-images.githubusercontent.com/49325152/224178566-4a10a7ca-201f-40c4-9a1d-9c606a66d97c.png)
 
+So, we fixed it by using the following command to force the user confirmation
 
+````
+aws cognito-idp admin-set-user-password --user-pool-id  us-east-1_59FptcUv8 --username camilol --password Testing1234! --permanent
+````
+
+Then we are authenticated, making sure the name and preffered username values are configured for our first user:
+
+![image](https://user-images.githubusercontent.com/49325152/224446393-a99ab909-2e4f-45ff-a287-af2338c4c236.png)
+
+### Sign-up
