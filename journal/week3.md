@@ -72,3 +72,10 @@ I validated the JWT was generated correctly:
 
 ![image](https://user-images.githubusercontent.com/49325152/224869570-7f9a13f4-ba4e-4e50-a109-8b1258b29198.png)
 
+So, after som code review and comparing on Andrew's code, i ended up having the JWT authentication on the app:
+
+![image](https://user-images.githubusercontent.com/49325152/225139341-bc545d26-c89c-407f-923a-7f199fb528e6.png)
+
+
+![image](https://user-images.githubusercontent.com/49325152/225139179-055cb559-af00-41ba-a87b-e50c649551d8.png)
+
