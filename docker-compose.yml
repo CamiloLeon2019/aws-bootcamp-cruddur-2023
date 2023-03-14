@@ -11,7 +11,9 @@ services:
       AWS_XRAY_DAEMON_ADDRESS: "xray-daemon:2000"
       AWS_DEFAULT_REGION: "${AWS_DEFAULT_REGION}"
       AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
-      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}" 
+      AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
+      AWS_COGNITO_USER_POOL_CLIENT_ID: "42tuuu13sivih23i2b9lg320v3"
+      AWS_COGNITO_USER_POOL_ID: "us-east-1_LweVv1AIk"
       ROLLBAR_ACCESS_TOKEN: "${ROLLBAR_ACCESS_TOKEN}"     
     build: ./backend-flask
     ports:
@@ -21,8 +23,8 @@ services:
   frontend-react-js:
     environment:
       REACT_APP_BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
-      REACT_APP_CLIENT_ID: "72oom5uojd9tnq04aj56eiace6"
-      REACT_APP_AWS_USER_POOLS_ID: "us-east-1_6wbpaf80w"
+      REACT_APP_CLIENT_ID: "42tuuu13sivih23i2b9lg320v3"
+      REACT_APP_AWS_USER_POOLS_ID: "us-east-1_LweVv1AIk"
       REACT_APP_AWS_COGNITO_REGION: "${AWS_DEFAULT_REGION}"
       REACT_APP_AWS_PROJECT_REGION: "${AWS_DEFAULT_REGION}"
     build: ./frontend-react-js
