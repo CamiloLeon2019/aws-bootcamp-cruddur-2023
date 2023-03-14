@@ -49,3 +49,26 @@ Then we are authenticated, making sure the name and preffered username values ar
 ![image](https://user-images.githubusercontent.com/49325152/224446393-a99ab909-2e4f-45ff-a287-af2338c4c236.png)
 
 ### Sign-up
+
+I received the confirmation code on my inbox and put it on the confirmation page:
+
+![image](https://user-images.githubusercontent.com/49325152/224862663-92444f1a-28fd-4565-afff-a5c8dca98c34.png)
+
+### Recover password 
+
+After confirming i was able to signing up with the OTP, i also was bale to get the recovery code:
+
+![image](https://user-images.githubusercontent.com/49325152/224864694-6d59f76e-cad9-4821-be25-3bf00af8fc6d.png)
+
+![image](https://user-images.githubusercontent.com/49325152/224864766-41de1018-5127-44dc-81a7-50f288bf462f.png)
+
+![image](https://user-images.githubusercontent.com/49325152/224864799-b9569fce-6b74-49e5-9437-a5d5926f6043.png)
+
+Honestly, i am falling behind right now and i'll love to do the review of the code and make the confirmation page look prettier:
+
+### JWT on the back-end
+
+I validated the JWT was generated correctly:
+
+![image](https://user-images.githubusercontent.com/49325152/224869570-7f9a13f4-ba4e-4e50-a109-8b1258b29198.png)
+
